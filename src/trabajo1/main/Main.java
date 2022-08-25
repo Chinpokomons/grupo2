@@ -17,6 +17,5 @@ public class Main {
         System.out.println(zapato2.getVida());
         arena1.pelea();
         System.out.println(zapato2.getVida());
-
     }
 }

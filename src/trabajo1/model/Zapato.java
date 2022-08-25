@@ -8,10 +8,8 @@ public class Zapato extends Chinpokomon{
     @Override
     public void ataque(Chinpokomon unPokemon) {
         var aux = Math.random() * ( 3 - 1 );
+        this.ataqueZapato(unPokemon);
         if(aux == 1) {
-            this.ataqueZapato(unPokemon);
-            this.ataqueZapato(unPokemon);
-        } else {
             this.ataqueZapato(unPokemon);
         }
 
