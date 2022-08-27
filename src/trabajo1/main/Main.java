@@ -14,20 +14,20 @@ public class Main {
         AtaqueZapatazo ataqueZapatazo = new AtaqueZapatazo(1);
         AtaquePomadaWassington ataquePomadaWassington = new AtaquePomadaWassington(5);
 
-        List<Ataque> ataques1 = new ArrayList<Ataque>();
-        ataques1.add(ataqueZapatazo);
-        List<Ataque> ataques2 = new ArrayList<Ataque>();
+        List<Ataque> listaAtaques1 = new ArrayList<Ataque>();
+        List<Ataque> listaAtaques2 = new ArrayList<Ataque>();
 
-        ataques2.add(ataqueZapatazo);
-        ataques2.add(ataquePomadaWassington);
+        listaAtaques1.add(ataqueZapatazo);
+        listaAtaques2.add(ataqueZapatazo);
+        listaAtaques2.add(ataquePomadaWassington);
 
-        Zapato zapato1 = new Zapato("zapato1", ataques1);
-        Zapato zapato2 = new Zapato("zapato2", ataques2);
+        Zapato zapato1 = new Zapato("zapato1", listaAtaques1);
+        Zapato zapato2 = new Zapato("zapato2", listaAtaques2);
 
         ArenaBatalla arena1 = new ArenaBatalla(zapato1, zapato2);
 
-        System.out.println(zapato2.getVida());
+        System.out.println("lA VIDA DEL ZAPATO 1 " + zapato1+ "AL EMPEZAR ES: " +zapato1.getVida());
+        System.out.println("lA VIDA DEL ZAPATO 2 "+ zapato2+ "AL EMPEZAR ES: " +zapato2.getVida());
         arena1.pelea();
-        System.out.println(zapato2.getVida());
    }
 }

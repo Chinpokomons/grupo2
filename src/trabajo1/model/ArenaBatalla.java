@@ -28,12 +28,11 @@ public class ArenaBatalla {
 
     public void pelea() {
 
-        while(this.pokemon1.getVida()>0 || pokemon2.getVida()>0) {
-
-                this.pokemon2.ataque(this.pokemon1);
-                System.out.println(pokemon2.getVida());
-                this.pokemon1.ataque(this.pokemon2);
-                System.out.println(pokemon1.getVida());
+        while(this.pokemon1.getVida()>0 && pokemon2.getVida()>0) {
+                this.pokemon1.ataque(this.pokemon1);
+                System.out.println("La vida del m1" + pokemon1 +" es " + pokemon1.getVida() );
+                this.pokemon2.ataque(this.pokemon2);
+                System.out.println("La vida del m2" + pokemon2 +" es " + pokemon2.getVida() );
         }
         if(this.pokemon1.getVida() == 0) {
             System.out.println("Ganó: " + this.pokemon2.getNombre());
