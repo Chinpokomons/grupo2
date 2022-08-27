@@ -1,21 +1,15 @@
 package trabajo1.model;
 
+import java.util.List;
+
 public class Zapato extends Chinpokomon{
-    public Zapato(String nombre) {
-        super(30, nombre);
+    public Zapato(String nombre, List<Ataque> ataques) {
+        super(30, nombre, ataques);
     }
 
     @Override
     public void ataque(Chinpokomon unPokemon) {
-        var aux = Math.random() * ( 3 - 1 );
-        this.ataqueZapato(unPokemon);
-        if(aux == 1) {
-            this.ataqueZapato(unPokemon);
-        }
-
-    }
-
-    public void ataqueZapato(Chinpokomon unPokemon) {
-        unPokemon.setVida(unPokemon.getVida() - 1);
+        double aux = Math.random() * ( this.getAtaques().size() - (this.getAtaques().size() - 1 ));
+        this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
     }
 }

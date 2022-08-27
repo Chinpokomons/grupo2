@@ -1,27 +1,18 @@
 package trabajo1.model;
 
+import java.util.List;
+
 public class Carnotron extends Chinpokomon{
 
-
-    public Carnotron(String nombre) {
-        super(20, nombre);
+    //Carnotron (tiene 20 de vida, dos ataques, rayo veloz que inflige 3 de daño, y cañón cónico que infringe 4 de daño)
+    public Carnotron(String nombre, List<Ataque> ataques) {
+        super(20, nombre, ataques);
     }
 
     @Override
     public void ataque(Chinpokomon unPokemon) {
-        var aux = Math.random() * ( 3 - 1 );
-        if(aux == 1) {
-            this.ataqueRayoVeloz(unPokemon);
-        } else {
-            this.ataqueCanioConico(unPokemon);
-        }
+        double aux = Math.random() * ( this.getAtaques().size() - (this.getAtaques().size() - 1 ));
+        this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
     }
 
-    public void ataqueRayoVeloz(Chinpokomon unPokemon) {
-        unPokemon.setVida(unPokemon.getVida() - 3);
-    }
-
-    public void ataqueCanioConico(Chinpokomon unPokemon) {
-        unPokemon.setVida(unPokemon.getVida() - 4);
-    }
 }
