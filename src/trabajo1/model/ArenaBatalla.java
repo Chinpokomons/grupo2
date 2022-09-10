@@ -28,16 +28,22 @@ public class ArenaBatalla {
 
     public void pelea() {
 
-        while(this.pokemon1.getVida()>0 && pokemon2.getVida()>0) {
-                this.pokemon1.ataque(this.pokemon1);
+        while(noTerminoLaPelea()) {
+                this.getPokemon1().ataque(this.getPokemon2());
                 System.out.println("La vida del m1" + pokemon1 +" es " + pokemon1.getVida() );
-                this.pokemon2.ataque(this.pokemon2);
+                this.getPokemon2().ataque(this.getPokemon1());
                 System.out.println("La vida del m2" + pokemon2 +" es " + pokemon2.getVida() );
         }
+        System.out.println("El ganador es: " + this.chinpokomonGanador());
+    }
+    private boolean noTerminoLaPelea(){
+        return this.pokemon1.getVida()>0 && pokemon2.getVida()>0;
+    }
+    private Chinpokomon chinpokomonGanador(){
         if(this.pokemon1.getVida() == 0) {
-            System.out.println("Ganó: " + this.pokemon2.getNombre());
+            return this.getPokemon2();
         } else {
-            System.out.println("Ganó: " + this.pokemon1.getNombre());
+            return this.getPokemon1();
         }
     }
 
