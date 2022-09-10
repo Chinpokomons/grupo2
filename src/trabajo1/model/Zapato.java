@@ -17,4 +17,9 @@ public class Zapato extends Chinpokomon{
         //double aux = Math.random() * ( this.getAtaques().size() )
         this.getAtaques().get(randomIndex).generarEfecto(this, unPokemon);
     }
+
+    @Override
+    public String toString() {
+        return "Zapato llamado: " + this.getNombre();
+    }
 }
