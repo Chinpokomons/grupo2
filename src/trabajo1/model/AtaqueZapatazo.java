@@ -1,6 +1,9 @@
 package trabajo1.model;
 
+import java.util.Random;
+
 public class AtaqueZapatazo extends AtaqueDanio{
+    Random random = new Random();
     public AtaqueZapatazo(int valorDeAtaque) {
         super(valorDeAtaque);
     }
@@ -8,9 +11,12 @@ public class AtaqueZapatazo extends AtaqueDanio{
     @Override
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
         super.generarEfecto(chinpokomon1, chinpokomon2);
-        var aux = Math.random() * ( 3 - 1 );
-        if(aux == 1) {
+
+        if(this.generarRandom(2)==1){
             super.generarEfecto(chinpokomon1, chinpokomon2);
         }
+    }
+    private int generarRandom(int valorMaximoExcluyente){
+        return random.nextInt(valorMaximoExcluyente);
     }
 }
