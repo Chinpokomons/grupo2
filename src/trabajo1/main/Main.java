@@ -7,9 +7,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String []args) {
-        //parte3: Queremos crear 2 zapatos, y hacerlos pelear. El primer Zapato solo conoce zapatazo, como se mencionó antes,
-        //        pero el segundo conoce Zapatazo y "Pomada Wassington",
-       //     un ataque que le recupera 5 puntos de vida a si mismo, en lugar de dañar al oponente.
 
         AtaqueZapatazo ataqueZapatazo = new AtaqueZapatazo(1);
         AtaquePomadaWassington ataquePomadaWassington = new AtaquePomadaWassington(5);
