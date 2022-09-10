@@ -15,4 +15,8 @@ public class Carnotron extends Chinpokomon{
         this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
     }
 
+    @Override
+    public String toString() {
+        return "Carnotron llamado: " + this.getNombre();
+    }
 }

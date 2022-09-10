@@ -16,4 +16,8 @@ public class Gallotronix extends Chinpokomon{
         this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
     }
 
+    @Override
+    public String toString() {
+        return "Gallotronix llamado: "+ this.getNombre();
+    }
 }
