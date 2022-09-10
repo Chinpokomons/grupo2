@@ -1,0 +1,16 @@
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.LoggerChinpokomon main
+INFO: Bitacora inicializada
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.LoggerChinpokomon main
+INFO: Llamadas a los componentes del sistema
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.subnivel.Utilidades funcionDudosa
+SEVERE: ERROR MASIVO
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.subnivel.Control controlar
+INFO: Proceso exitoso
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.subnivel.under.InternalSys llamadaSistema
+WARNING: Ocurrio un error de acceso en 0xFF
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.LoggerChinpokomon main
+INFO: Probando manejo de excepciones
+sep. 10, 2022 4:30:01 P. M. trabajo1.model.LoggerChinpokomon main
+SEVERE: java.lang.Exception: ERROR DE CONTROL DE FLUJO DE PROGRAMA
+	at trabajo1.model.LoggerChinpokomon.main(LoggerChinpokomon.java:73)
+
