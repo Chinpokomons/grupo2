@@ -1,8 +1,5 @@
 package trabajo1.model;
-
-import java.util.Random;
-
-public class AtaqueGarraMecanica extends AtaqueDanio{
+public class AtaqueGarraMecanica extends Ataque{
     public AtaqueGarraMecanica(int valorDeAtaque) {
         super(valorDeAtaque);
         //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
