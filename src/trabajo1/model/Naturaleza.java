@@ -14,4 +14,11 @@ public abstract class Naturaleza {
 	public String getNombre() {
 		return this.nombre;
 	}
+
+	@Override
+	public String toString() {
+		return "Naturaleza{" +
+				"nombre='" + nombre + '\'' +
+				'}';
+	}
 }

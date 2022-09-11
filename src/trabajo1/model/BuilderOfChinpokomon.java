@@ -35,13 +35,12 @@ public class BuilderOfChinpokomon implements Builder{
         this.genRandom = genRandom;
     }
 
-
-
     public Chinpokomon chinpokomonResult(){
         return new Chinpokomon(vida, nombre, listaDeAtaques, naturaleza) {
             @Override
-            public void ataque(Chinpokomon unPokemon) {
-
+            public void ataque(Chinpokomon chipokomonAAtacar) {
+                int random = genRandom.generarRandom(listaDeAtaques.size());
+                this.getAtaques().get(random).generarEfecto(this, chipokomonAAtacar);
             }
         };
     }
