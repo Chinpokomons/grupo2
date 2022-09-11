@@ -1,17 +1,17 @@
 package trabajo1.model;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Chinpokomon {
     private int vida;
     private String nombre;
     private List<Ataque> ataques;
+    private Naturaleza naturaleza;
 
-    public Chinpokomon(int vida, String nombre, List<Ataque> ataques) {
+    public Chinpokomon(int vida, String nombre, List<Ataque> ataques, Naturaleza naturaleza) {
         this.vida = vida;
         this.nombre = nombre;
         this.ataques = ataques;
+        this.naturaleza = naturaleza;
     }
 
     public String getNombre() {
@@ -26,10 +26,6 @@ public abstract class Chinpokomon {
         return ataques;
     }
 
-    public void setAtaques(List<Ataque> ataques) {
-        this.ataques = ataques;
-    }
-
     public int getVida() {
         return vida;
     }
@@ -37,7 +33,19 @@ public abstract class Chinpokomon {
     public void setVida(int vida) {
         this.vida = vida;
     }
+    
+    public Naturaleza getNaturaleza() {
+    	return naturaleza;
+    }
 
     public abstract void ataque(Chinpokomon unPokemon);
 
+    @Override
+    public String toString() {
+        return "Chinpokomon{" +
+                "vida=" + vida +
+                ", nombre='" + nombre + '\'' +
+                ", naturaleza=" + naturaleza +
+                '}';
+    }
 }

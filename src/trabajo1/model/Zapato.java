@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Zapato extends Chinpokomon{
     Random random = new Random();
-    public Zapato(String nombre, List<Ataque> ataques) {
-        super(30, nombre, ataques);
+    public Zapato(String nombre, List<Ataque> ataques, Naturaleza naturaleza) {
+        super(30, nombre, ataques, naturaleza);
     }
 
 
@@ -16,5 +16,10 @@ public class Zapato extends Chinpokomon{
         int randomIndex = random.nextInt(this.getAtaques().size());
         //double aux = Math.random() * ( this.getAtaques().size() )
         this.getAtaques().get(randomIndex).generarEfecto(this, unPokemon);
+    }
+
+    @Override
+    public String toString() {
+        return "Zapato llamado: " + this.getNombre();
     }
 }
