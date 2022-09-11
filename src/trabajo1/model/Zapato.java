@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Zapato extends Chinpokomon{
     Random random = new Random();
-    public Zapato(String nombre, List<Ataque> ataques) {
-        super(30, nombre, ataques);
+    public Zapato(String nombre, List<Ataque> ataques, Naturaleza naturaleza) {
+        super(30, nombre, ataques, naturaleza);
     }
 
 
