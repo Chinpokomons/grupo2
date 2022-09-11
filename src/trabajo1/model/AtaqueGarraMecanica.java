@@ -3,7 +3,6 @@ package trabajo1.model;
 import java.util.Random;
 
 public class AtaqueGarraMecanica extends AtaqueDanio{
-    Random random = new Random();
     public AtaqueGarraMecanica(int valorDeAtaque) {
         super(valorDeAtaque);
     }
@@ -16,9 +15,6 @@ public class AtaqueGarraMecanica extends AtaqueDanio{
         }else{
             super.generarEfecto(chinpokomon1, chinpokomon2);
         }
-    }
-    private int generarRandom(int valorMaximoExcluyente){
-        return random.nextInt(valorMaximoExcluyente);
     }
     private int obtenerVidaRestanteDeChinpokomon(Chinpokomon chinpokomon){
         return chinpokomon.getVida();
