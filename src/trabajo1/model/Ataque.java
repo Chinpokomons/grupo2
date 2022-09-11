@@ -11,7 +11,7 @@ public class Ataque {
         this.valorDeAtaque = valorDeAtaque;
     }
 
-    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2){
+    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2, int probabilidad){
         System.out.println("el chiponkmon1 es " + chinpokomon1 + " y el 2 es " + chinpokomon2);
         chinpokomon2.setVida(chinpokomon2.getVida() - this.getValorDeAtaque() - this.danioExtraNaturaleza(chinpokomon1, chinpokomon2));
     }
