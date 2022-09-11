@@ -4,6 +4,8 @@ public class AtaqueZapatazo extends AtaqueDanio{
 
     public AtaqueZapatazo(int valorDeAtaque) {
         super(valorDeAtaque);
+      //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
+        this.setValorAtaqueNaturaleza(3);
     }
 
     @Override

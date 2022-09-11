@@ -7,11 +7,13 @@ public abstract class Chinpokomon {
     private int vida;
     private String nombre;
     private List<Ataque> ataques;
+    private Naturaleza naturaleza;
 
-    public Chinpokomon(int vida, String nombre, List<Ataque> ataques) {
+    public Chinpokomon(int vida, String nombre, List<Ataque> ataques, Naturaleza naturaleza) {
         this.vida = vida;
         this.nombre = nombre;
         this.ataques = ataques;
+        this.naturaleza = naturaleza;
     }
 
     public String getNombre() {
@@ -36,6 +38,10 @@ public abstract class Chinpokomon {
 
     public void setVida(int vida) {
         this.vida = vida;
+    }
+    
+    public Naturaleza getNaturaleza() {
+    	return naturaleza;
     }
 
     public abstract void ataque(Chinpokomon unPokemon);

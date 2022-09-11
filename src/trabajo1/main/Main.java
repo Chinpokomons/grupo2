@@ -18,16 +18,24 @@ public class Main {
         List<Ataque> listaAtaques1 = new ArrayList<Ataque>();
         List<Ataque> listaAtaques2 = new ArrayList<Ataque>();
         List<Ataque> listaAtaques3 = new ArrayList<Ataque>();
+        
+        //creamos las naturalezas
+        RobotNaturaleza robot = new RobotNaturaleza();
+        AnimalNaturaleza animal = new AnimalNaturaleza();
+        CosaNaturaleza cosa = new CosaNaturaleza();
 
         listaAtaques1.add(ataqueZapatazo);
         listaAtaques2.add(ataqueZapatazo);
         listaAtaques2.add(ataquePomadaWassington);
         listaAtaques3.add(ataqueGarraMecanica);
+        
+        // los chinpokomon pueden tener diferentes naturaleza respecto a sus especies
+        // depende de la naturale sera mas efectivos contra otros
+        // robot --> animal || animal --> cosa || cosa --> robot
+        Zapato zapato1 = new Zapato("zapato1", listaAtaques1, animal);
+        Zapato zapato2 = new Zapato("zapato2", listaAtaques2, animal);
 
-        Zapato zapato1 = new Zapato("zapato1", listaAtaques1);
-        Zapato zapato2 = new Zapato("zapato2", listaAtaques2);
-
-        Gallotronix gallotronix = new Gallotronix("Gallo",listaAtaques3);
+        Gallotronix gallotronix = new Gallotronix("Gallo",listaAtaques3,animal);
         //ArenaBatalla arena1 = new ArenaBatalla(zapato1, zapato2);
         ArenaBatalla arena2 = new ArenaBatalla(zapato1, gallotronix);
         System.out.println("lA VIDA DEL ZAPATO 1 " + zapato1+ "AL EMPEZAR ES: " +zapato1.getVida());

@@ -5,6 +5,8 @@ import java.util.Random;
 public class AtaqueGarraMecanica extends AtaqueDanio{
     public AtaqueGarraMecanica(int valorDeAtaque) {
         super(valorDeAtaque);
+        //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
+        this.setValorAtaqueNaturaleza(2);
     }
 
     @Override
