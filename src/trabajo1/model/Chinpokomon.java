@@ -1,6 +1,4 @@
 package trabajo1.model;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Chinpokomon {
@@ -28,10 +26,6 @@ public abstract class Chinpokomon {
         return ataques;
     }
 
-    public void setAtaques(List<Ataque> ataques) {
-        this.ataques = ataques;
-    }
-
     public int getVida() {
         return vida;
     }
@@ -46,4 +40,12 @@ public abstract class Chinpokomon {
 
     public abstract void ataque(Chinpokomon unPokemon);
 
+    @Override
+    public String toString() {
+        return "Chinpokomon{" +
+                "vida=" + vida +
+                ", nombre='" + nombre + '\'' +
+                ", naturaleza=" + naturaleza +
+                '}';
+    }
 }

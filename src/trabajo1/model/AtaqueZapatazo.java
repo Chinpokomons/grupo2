@@ -9,6 +9,7 @@ public class AtaqueZapatazo extends Ataque{
     }
 
     @Override
+
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2,int probabilidad) {
         super.generarEfecto(chinpokomon1, chinpokomon2,probabilidad);
         if(this.generarRandom(probabilidad)==1){
