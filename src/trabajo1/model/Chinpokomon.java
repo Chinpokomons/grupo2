@@ -38,7 +38,10 @@ public abstract class Chinpokomon {
     	return naturaleza;
     }
 
-    public abstract void ataque(Chinpokomon unPokemon);
+    public void ataque(Chinpokomon unPokemon) {
+        double aux = Math.random() * ( this.getAtaques().size() - (this.getAtaques().size() - 1 ));
+        this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
+    }
 
     @Override
     public String toString() {
