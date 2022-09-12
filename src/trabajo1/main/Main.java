@@ -1,7 +1,8 @@
 package trabajo1.main;
 
-import trabajo1.model.*;
 
+import trabajo1.model.*;
+import trabajo1.model.ArenaBatalla;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,19 +37,16 @@ public class Main {
         // los chinpokomon pueden tener diferentes naturaleza respecto a sus especies
         // depende de la naturale sera mas efectivos contra otros
         // robot --> animal || animal --> cosa || cosa --> robot
-        Zapato zapato1 = new Zapato("zapato1", listaAtaques1, animal);
-        Zapato zapato2 = new Zapato("zapato2", listaAtaques2, animal);
+        //Zapato zapato1 = new Zapato("zapato1", listaAtaques1, animal);
+        //Zapato zapato2 = new Zapato("zapato2", listaAtaques2, animal);
         //Zapato nuevo
-        Chinpokomon zapatito = generador.crearZapato(builder,listaAtaques2);
-/*
-        //Gallotronix gallotronix = new Gallotronix("Gallo", listaAtaques3, animal);
-        //ArenaBatalla arena1 = new ArenaBatalla(zapato1, zapato2);
-        //ArenaBatalla arena2 = new ArenaBatalla(zapato1, gallotronix);
-        System.out.println("lA VIDA DEL ZAPATO 1 " + zapato1+ "AL EMPEZAR ES: " +zapato1.getVida());
-        //System.out.println("lA VIDA DEL ZAPATO 2 "+ zapato2+ "AL EMPEZAR ES: " +zapato2.getVida());
-        System.out.println("lA VIDA DEL gallotronix " + gallotronix+ "AL EMPEZAR ES: " +gallotronix.getVida());
-        arena2.pelea();
-*/
-        System.out.println(zapatito);
+        Chinpokomon zapatito = generador.crearZapato(builder);
+        Chinpokomon zapatitoEspecial = generador.crearZapatoConDosAtaques(builder);
+        System.out.println("lA VIDA DEL ZAPATO 1 " + zapatito+ " AL EMPEZAR ES: " +zapatito.getVida());
+        System.out.println("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " +zapatitoEspecial.getVida());
+        System.out.println("-------------");
+        ArenaBatalla arena1 = new ArenaBatalla(zapatito, zapatitoEspecial);
+        System.out.println(arena1);
+        arena1.pelea();
    }
 }
