@@ -1,6 +1,6 @@
 package trabajo1.model;
 
-public class AtaqueZapatazo extends AtaqueDanio{
+public class AtaqueZapatazo extends Ataque{
 
     public AtaqueZapatazo(int valorDeAtaque) {
         super(valorDeAtaque);
@@ -9,11 +9,10 @@ public class AtaqueZapatazo extends AtaqueDanio{
     }
 
     @Override
-    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
-        super.generarEfecto(chinpokomon1, chinpokomon2);
-
-        if(this.generarRandom(2)==1){
-            super.generarEfecto(chinpokomon1, chinpokomon2);
+    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2,int probabilidad) {
+        super.generarEfecto(chinpokomon1, chinpokomon2,probabilidad);
+        if(this.generarRandom(probabilidad)==1){
+            super.generarEfecto(chinpokomon1, chinpokomon2,probabilidad);
         }
     }
 }
