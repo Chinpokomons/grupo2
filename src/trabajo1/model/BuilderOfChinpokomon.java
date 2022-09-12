@@ -34,8 +34,8 @@ public class BuilderOfChinpokomon implements Builder{
     public void setRandom(GeneracionDeRandom genRandom) {
         this.genRandom = genRandom;
     }
-
+    //agregar random
     public Chinpokomon chinpokomonResult(){
-        return new Chinpokomon(vida, nombre, listaDeAtaques, naturaleza);
+        return new Chinpokomon(vida, nombre, listaDeAtaques, naturaleza,genRandom);
     }
 }

@@ -6,4 +6,5 @@ public class AtaqueRayoVeloz extends Ataque{
       //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
         this.setValorAtaqueNaturaleza(1);
     }
+
 }

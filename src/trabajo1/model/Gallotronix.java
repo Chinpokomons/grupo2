@@ -3,8 +3,8 @@ package trabajo1.model;
 import java.util.List;
 
 public class Gallotronix extends Chinpokomon{
-    public Gallotronix(String nombre, List<Ataque> ataques, Naturaleza naturaleza) {
-        super(25, nombre, ataques, naturaleza);
+    public Gallotronix(String nombre, List<Ataque> ataques, Naturaleza naturaleza,GeneracionDeRandom genRandom) {
+        super(25, nombre, ataques, naturaleza, genRandom);
     }
 
     @Override

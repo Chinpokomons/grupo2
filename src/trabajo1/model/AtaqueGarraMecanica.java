@@ -7,12 +7,12 @@ public class AtaqueGarraMecanica extends Ataque{
     }
 
     @Override
-    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2,int probabilidad) {
-        int random = this.generarRandom(probabilidad);
+    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
+        int random = this.generarRandom(10);
         if(random == 1){
             this.sacarMitadDeLaVidaQueLeQueda(chinpokomon2);
         }else{
-            super.generarEfecto(chinpokomon1, chinpokomon2,probabilidad);
+            super.generarEfecto(chinpokomon1, chinpokomon2);
         }
     }
     private int obtenerVidaRestanteDeChinpokomon(Chinpokomon chinpokomon){

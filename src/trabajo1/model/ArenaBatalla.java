@@ -35,11 +35,11 @@ public class ArenaBatalla {
      * */
     public void pelea() {
 
-        while(noTerminoLaPelea()) {
+        while(!terminoLaPelea()) {
                 this.getChinpokomon1().ataque(this.getChinpokomon2());
-                System.out.println("La vida del m2" + chinpokomon2 +" es " + chinpokomon2.getVida() );
+            System.out.println("Ataco el M1," + " La vida de m1 es: "+ this.getChinpokomon1().getVida() + " y la vida de m2 es " + this.getChinpokomon2().getVida() );
                 this.getChinpokomon2().ataque(this.getChinpokomon1());
-                System.out.println("La vida del m1" + chinpokomon1 +" es " + chinpokomon1.getVida() );
+                System.out.println("Ataco el M2," + " La vida de m2 es: "+ this.getChinpokomon2().getVida() + " y la vida de m1 es " + this.getChinpokomon1().getVida() );
         }
         this.imprimirChinpokomonGanador(this.chinpokomonGanador());
     }
@@ -49,8 +49,8 @@ public class ArenaBatalla {
      * tipo: Boolean
      * parametro: ninguno
      * */
-    private boolean noTerminoLaPelea(){
-        return this.getChinpokomon1().getVida()>0 && getChinpokomon2().getVida()>0;
+    private boolean terminoLaPelea(){
+        return this.getChinpokomon1().getVida()==0 || getChinpokomon2().getVida()==0;
     }
 
     /*
@@ -66,6 +66,15 @@ public class ArenaBatalla {
             return this.getChinpokomon1();
         }
     }
+
+    @Override
+    public String toString() {
+        return "ArenaBatalla{" +
+                "chinpokomon1=" + chinpokomon1 +
+                ", chinpokomon2=" + chinpokomon2 +
+                '}';
+    }
+
     /*
     * proposito: imprimir el Chinpokomon que gano la pelea
     * precondicion: ninguna
