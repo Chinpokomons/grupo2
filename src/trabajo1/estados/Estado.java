@@ -9,16 +9,16 @@ public class Estado {
         this.logger = logger;
     }
 
-     public String info2(String mensaje) {
-        return "";
+     public void info2(String mensaje) {
+
      }
-     public String warn2(String mensaje) {
-         return "";
+     public void warn2(String mensaje) {
+
      }
-     public String error2(String mensaje) {
-         return "";
+     public void error2(String mensaje) {
+
      }
-     public String debug2(String mensaje) {
-         return "";
+     public void debug2(String mensaje) {
+
      }
 }

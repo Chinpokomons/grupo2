@@ -8,9 +8,7 @@ import java.awt.desktop.ScreenSleepEvent;
 
 public class Logger {
     private static Logger logger;
-
     private static Estado estado;
-
     private Logger (Estado estado) {
         Logger.estado = estado;
     }
@@ -30,14 +28,14 @@ public class Logger {
         Logger.estado = estado;
     }
 
-    public String debug(String string) { return estado.debug2(string); }
-    public String info(String string) {
-        return estado.info2(string);
+    public void debug(String string) {  estado.debug2(string); }
+    public void info(String string) {
+         estado.info2(string);
     }
-    public String warn(String string) {
-        return estado.warn2(string);
+    public void warn(String string) {
+         estado.warn2(string);
     }
-    public String error(String string) { return estado.error2(string); }
+    public void error(String string) {  estado.error2(string); }
 
     public static Estado getEstado() {
         return estado;

@@ -5,22 +5,25 @@ import trabajo1.model.Logger;
 public class Debug extends Estado{
 
     @Override
-    public String info2(String mensaje) {
-        return "INFO: " + mensaje;
+    public void info2(String mensaje) {
+        System.out.println("INFO: " + mensaje);
     }
 
     @Override
-    public String warn2(String mensaje) {
-        return "WARN: " + mensaje;
+    public void warn2(String mensaje) {
+
+        System.out.println("WARN: " + mensaje);
     }
 
     @Override
-    public String error2(String mensaje) {
-        return "ERROR: " + mensaje;
-    }
+    public void error2(String mensaje) {
+        System.out.println("ERROR: " + mensaje);
 
+    }
     @Override
-    public String debug2(String mensaje) {
-        return "DEBUG: " + mensaje;
+    public void debug2(String mensaje) {
+
+        System.out.println("DEBUG: " + mensaje);
+
     }
 }

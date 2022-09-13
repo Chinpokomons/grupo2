@@ -12,9 +12,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String []args) {
+
         Info info = new Info();
         Warn warn = new Warn();
         Error error = new Error();
+
+
         Logger loggerSingleton = Logger.getInstance();
 
         //parte3: Queremos crear 2 zapatos, y hacerlos pelear. El primer Zapato solo conoce zapatazo, como se mencionó antes,
@@ -52,7 +55,8 @@ public class Main {
         Chinpokomon zapatito = generador.crearZapato(builder);
         Chinpokomon zapatitoEspecial = generador.crearZapatoConDosAtaques(builder);
         System.out.println("lA VIDA DEL ZAPATO 1 " + zapatito+ " AL EMPEZAR ES: " +zapatito.getVida());
-        System.out.println(loggerSingleton.info("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida()));
+        System.out.println("-------------");
+        loggerSingleton.info("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida());
 
         System.out.println("-------------");
         ArenaBatalla arena1 = new ArenaBatalla(zapatito, zapatitoEspecial);
@@ -61,6 +65,8 @@ public class Main {
 
         System.out.println("------cambio de nivel-------");
         loggerSingleton.setNivel(warn);
-        System.out.println(loggerSingleton.warn("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida()));
+        System.out.println(loggerSingleton.getEstado());
+        loggerSingleton.warn("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida());
+        //System.out.println(zapatitoEspecial);
    }
 }
