@@ -50,7 +50,7 @@ public class ArenaBatalla {
      * parametro: ninguno
      * */
     private boolean noTerminoLaPelea(){
-        return !this.murioChinpokomon1() || !this.murioChinpokomon2();
+        return !this.murioChinpokomon1() && !this.murioChinpokomon2();
     }
 
     private boolean murioChinpokomon1(){

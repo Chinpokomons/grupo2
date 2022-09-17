@@ -8,7 +8,7 @@ public class AtaqueGarraMecanica extends Ataque{
 
     @Override
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
-        if(sePuedeAtacar(chinpokomon1,chinpokomon2)){
+
             int random = this.generarRandom(10);
             if(random == 1){
                 System.out.println("ENTRE ACA");
@@ -16,7 +16,7 @@ public class AtaqueGarraMecanica extends Ataque{
             }else{
                 super.generarEfecto(chinpokomon1, chinpokomon2);
             }
-        }
+
     }
     private int obtenerVidaRestanteDeChinpokomon(Chinpokomon chinpokomon){
         return chinpokomon.getVida();
