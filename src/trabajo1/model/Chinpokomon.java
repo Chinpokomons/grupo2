@@ -39,16 +39,24 @@ public class Chinpokomon {
     }
 
     public void ataque(Chinpokomon unChiPokomon) {
+        if(this.noEstaMuertoElChinpokomonAtacar(unChiPokomon)){
+            this.atacarSegunAtaqueSeleccionado(unChiPokomon);
+        }
+    }
+
+    private void atacarSegunAtaqueSeleccionado(Chinpokomon unChiPokomonAAtacar){
         if(this.getAtaques().size() == 1){
-            this.getAtaques().get(0).generarEfecto(this, unChiPokomon);
+            this.getAtaques().get(0).generarEfecto(this, unChiPokomonAAtacar);
         }else{
             int ataqueElegido = genRandom.generarRandom(this.getAtaques().size());
-            this.getAtaques().get(ataqueElegido).generarEfecto(this, unChiPokomon);
+            this.getAtaques().get(ataqueElegido).generarEfecto(this, unChiPokomonAAtacar);
         }
+    }
 
+    private boolean noEstaMuertoElChinpokomonAtacar(Chinpokomon unChiPokomon){
+        return unChiPokomon.getVida()>0;
     }
     @Override
     public String toString() { return "Chinpokomon{" + "vida=" + vida + ", nombre='" + nombre + '\'' + ", naturaleza=" + naturaleza + '}';
     }
-
 }

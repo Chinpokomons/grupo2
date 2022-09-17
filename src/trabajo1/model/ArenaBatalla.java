@@ -35,9 +35,9 @@ public class ArenaBatalla {
      * */
     public void pelea() {
 
-        while(!terminoLaPelea()) {
+        while(this.noTerminoLaPelea()) {
                 this.getChinpokomon1().ataque(this.getChinpokomon2());
-            System.out.println("Ataco el M1," + " La vida de m1 es: "+ this.getChinpokomon1().getVida() + " y la vida de m2 es " + this.getChinpokomon2().getVida() );
+                System.out.println("Ataco el M1," + " La vida de m1 es: "+ this.getChinpokomon1().getVida() + " y la vida de m2 es " + this.getChinpokomon2().getVida() );
                 this.getChinpokomon2().ataque(this.getChinpokomon1());
                 System.out.println("Ataco el M2," + " La vida de m2 es: "+ this.getChinpokomon2().getVida() + " y la vida de m1 es " + this.getChinpokomon1().getVida() );
         }
@@ -49,10 +49,16 @@ public class ArenaBatalla {
      * tipo: Boolean
      * parametro: ninguno
      * */
-    private boolean terminoLaPelea(){
-        return this.getChinpokomon1().getVida()==0 || getChinpokomon2().getVida()==0;
+    private boolean noTerminoLaPelea(){
+        return !this.murioChinpokomon1() || !this.murioChinpokomon2();
     }
 
+    private boolean murioChinpokomon1(){
+        return this.getChinpokomon1().getVida()<=0;
+    }
+    private boolean murioChinpokomon2(){
+        return getChinpokomon2().getVida()<=0;
+    }
     /*
      * proposito: obtener el Chinpokomon que gano la pelea
      * precondicion: debe haber dos Chinpokomon en la arena de batalla
@@ -60,7 +66,7 @@ public class ArenaBatalla {
      * parametro: ninguno
      * */
     private Chinpokomon chinpokomonGanador(){
-        if(this.getChinpokomon1().getVida() == 0) {
+        if(this.getChinpokomon1().getVida() <= 0) {
             return this.getChinpokomon2();
         } else {
             return this.getChinpokomon1();

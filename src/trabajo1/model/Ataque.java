@@ -5,7 +5,7 @@ import java.util.Random;
 public class Ataque {
     private int valorDeAtaque;
     private int valorAtaqueNaturaleza = 0;
-    Random random = new Random();
+    protected Random random = new Random();
 
     public Ataque(int valorDeAtaque) {
         this.valorDeAtaque = valorDeAtaque;
@@ -13,11 +13,16 @@ public class Ataque {
     }
 
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2){
-        if(chinpokomon2.getVida()>0){
+        if(this.sePuedeAtacar(chinpokomon1,chinpokomon2)){
             chinpokomon2.setVida(chinpokomon2.getVida() - this.getValorDeAtaque() - this.danioExtraNaturaleza(chinpokomon1, chinpokomon2));
         }
-
     }
+
+    public boolean sePuedeAtacar(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2){
+        return chinpokomon2.getVida()>0 || chinpokomon1.getVida()>0;
+    }
+
+    public Random getRandom(){return random;}
 
     public int getValorDeAtaque() {
         return valorDeAtaque;

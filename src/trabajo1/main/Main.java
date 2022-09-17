@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String []args) {
-
+/*
         Info info = new Info();
         Warn warn = new Warn();
         Error error = new Error();
@@ -32,10 +32,14 @@ public class Main {
         AtaquePomadaWassington ataquePomadaWassington = new AtaquePomadaWassington(5);
         AtaqueGarraMecanica ataqueGarraMecanica = new AtaqueGarraMecanica(2);
 
+        System.out.println(ataqueZapatazo.getRandom());
+        System.out.println(ataquePomadaWassington.getRandom());
+        System.out.println(".-------");
         List<Ataque> listaAtaques1 = new ArrayList<Ataque>();
         List<Ataque> listaAtaques2 = new ArrayList<Ataque>();
         List<Ataque> listaAtaques3 = new ArrayList<Ataque>();
-        
+
+
         //creamos las naturalezas
         RobotNaturaleza robot = new RobotNaturaleza();
         AnimalNaturaleza animal = new AnimalNaturaleza();
@@ -54,6 +58,7 @@ public class Main {
         //Zapato nuevo
         Chinpokomon zapatito = generador.crearZapato(builder);
         Chinpokomon zapatitoEspecial = generador.crearZapatoConDosAtaques(builder);
+
         System.out.println("lA VIDA DEL ZAPATO 1 " + zapatito+ " AL EMPEZAR ES: " +zapatito.getVida());
         System.out.println("-------------");
         loggerSingleton.info("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida());
@@ -69,4 +74,28 @@ public class Main {
         loggerSingleton.warn("lA VIDA DEL ZAPATO 2 "+ zapatitoEspecial+ " AL EMPEZAR ES: " + zapatitoEspecial.getVida());
         //System.out.println(zapatitoEspecial);
    }
+
+ */
+    //punto 1
+        Info info = new Info();
+        Warn warn = new Warn();
+        Error error = new Error();
+
+
+        Logger loggerSingleton = Logger.getInstance();
+        BuilderOfChinpokomon builder = new BuilderOfChinpokomon();
+        GeneradorDeChinpokomons generador = new GeneradorDeChinpokomons();
+
+        Chinpokomon zapatito = generador.crearZapato(builder);
+        Chinpokomon gallotronix = generador.crearGallotronix(builder);
+
+        loggerSingleton.info("lA VIDA DEL ZAPATO " + zapatito+ " AL EMPEZAR ES: " +zapatito.getVida());
+        System.out.println("-------------");
+        loggerSingleton.info("lA VIDA DEL gallotronix 2 "+ gallotronix+ " AL EMPEZAR ES: " + gallotronix.getVida());
+
+        System.out.println("-------------");
+        ArenaBatalla arena1 = new ArenaBatalla(zapatito, gallotronix);
+        System.out.println(arena1);
+        arena1.pelea();
+    }
 }
