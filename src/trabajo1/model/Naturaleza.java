@@ -1,6 +1,6 @@
 package trabajo1.model;
 
-public abstract class Naturaleza {
+public abstract class Naturaleza implements Natural {
 	private String nombre;
 	
 	public Naturaleza(String nombre) {
@@ -8,9 +8,13 @@ public abstract class Naturaleza {
 	}
 	
 	// asignar la ventaja de esta naturaleza sobre otra
-	public abstract boolean tieneVentaja( Naturaleza naturaleza);
+	@Override
+	public boolean tieneVentaja( Naturaleza naturaleza) {
+		return true;
+	}
 	
 	// obtener el nombre
+	@Override
 	public String getNombre() {
 		return this.nombre;
 	}
