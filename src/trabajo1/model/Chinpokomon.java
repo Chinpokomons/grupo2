@@ -39,7 +39,7 @@ public class Chinpokomon {
     }
 
     public void ataque(Chinpokomon unChiPokomon) {
-        if(this.noEstaMuertoElChinpokomonAtacar(unChiPokomon)){
+        if(this.noEstaMuertoElChinpokomonAtacar(unChiPokomon) && this.estoyVivo()){
             this.atacarSegunAtaqueSeleccionado(unChiPokomon);
         }
     }
@@ -52,7 +52,7 @@ public class Chinpokomon {
             this.getAtaques().get(ataqueElegido).generarEfecto(this, unChiPokomonAAtacar);
         }
     }
-
+    private boolean estoyVivo(){return this.getVida() >0;}
     private boolean noEstaMuertoElChinpokomonAtacar(Chinpokomon unChiPokomon){
         return unChiPokomon.getVida()>0;
     }
