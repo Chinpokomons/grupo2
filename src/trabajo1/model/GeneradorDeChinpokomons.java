@@ -7,56 +7,64 @@ public class GeneradorDeChinpokomons {
     GeneracionDeRandom generator = GeneracionDeRandom.getInstance();
     public Chinpokomon crearZapato(BuilderOfChinpokomon builder){
         List<Ataque> listaAtaques = new ArrayList<Ataque>();
+        CompuestoNatural naturalezas = new CompuestoNatural();
         AtaqueZapatazo ataqueZapatazo = this.crearAtaqueZapato();
         listaAtaques.add(ataqueZapatazo);
         Naturaleza cosa = this.crearNaturalezaCosa();
+        naturalezas.agregar(cosa);
         builder.setNombre("Zapato");
         builder.setVida(30);
         builder.setAtaques(listaAtaques);
         builder.setRandom(generator);
-        builder.setNaturaleza(cosa);
+        builder.setNaturaleza(naturalezas);
 
         return builder.chinpokomonResult();
     }
     public Chinpokomon crearZapatoConDosAtaques(BuilderOfChinpokomon builder){
         List<Ataque> listaAtaques = new ArrayList<Ataque>();
+        CompuestoNatural naturalezas = new CompuestoNatural();
         AtaqueZapatazo ataqueZapatazo = this.crearAtaqueZapato();
         AtaquePomadaWassington ataquePomadaWassington = this.crearAtaquePomadaWassington();
         listaAtaques.add(ataqueZapatazo);
         listaAtaques.add(ataquePomadaWassington);
         Naturaleza cosa = this.crearNaturalezaCosa();
+        naturalezas.agregar(cosa);
         builder.setNombre("Zapato con dos ataques");
         builder.setVida(30);
         builder.setAtaques(listaAtaques);
         builder.setRandom(generator);
-        builder.setNaturaleza(cosa);
+        builder.setNaturaleza(naturalezas);
 
         return builder.chinpokomonResult();
     }
 
     public Chinpokomon crearCarnotron(BuilderOfChinpokomon builder){
         List<Ataque> listaAtaques = new ArrayList<Ataque>();
+        CompuestoNatural naturalezas = new CompuestoNatural();
         listaAtaques.add(this.crearAtaqueRayoVeloz());
         listaAtaques.add(this.crearCanionSonico());
         Naturaleza animal = this.crearNaturalezaAnimal();
+        naturalezas.agregar(animal);
         builder.setNombre("Carnotron");
         builder.setVida(20);
         builder.setAtaques(listaAtaques);
         builder.setRandom(generator);
-        builder.setNaturaleza(animal);
+        builder.setNaturaleza(naturalezas);
 
         return builder.chinpokomonResult();
     }
 
     public Chinpokomon crearGallotronix(BuilderOfChinpokomon builder){
         List<Ataque> listaAtaques = new ArrayList<Ataque>();
+        CompuestoNatural naturalezas = new CompuestoNatural();
         listaAtaques.add(this.crearAtaqueGarraMecanica());
         Naturaleza robot = this.crearNaturalezaRobot();
+        naturalezas.agregar(robot);
         builder.setNombre("Gallotronix");
         builder.setVida(25);
         builder.setAtaques(listaAtaques);
         builder.setRandom(generator);
-        builder.setNaturaleza(robot);
+        builder.setNaturaleza(naturalezas);
 
         return builder.chinpokomonResult();
     }
