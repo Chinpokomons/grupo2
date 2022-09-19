@@ -6,7 +6,6 @@ import trabajo1.estados.Error;
 import trabajo1.estados.Info;
 import trabajo1.estados.Warn;
 import trabajo1.model.*;
-import trabajo1.model.ArenaBatalla;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,8 +93,12 @@ public class Main {
         loggerSingleton.info("lA VIDA DEL gallotronix 2 "+ gallotronix+ " AL EMPEZAR ES: " + gallotronix.getVida());
 
         System.out.println("-------------");
-        ArenaBatalla arena1 = new ArenaBatalla(zapatito, gallotronix);
+
+        ArenaBatalla arena1 = new ArenaBatalla(zapatito,gallotronix);
         System.out.println(arena1);
-        arena1.pelea();
+        arena1.pelea(loggerSingleton);
+
+
     }
+
 }
