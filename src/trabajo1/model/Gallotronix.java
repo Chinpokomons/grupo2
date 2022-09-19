@@ -9,8 +9,8 @@ public class Gallotronix extends Chinpokomon{
 
     @Override
     public void ataque(Chinpokomon unPokemon) {
-        double aux = Math.random() * ( this.getAtaques().size() - (this.getAtaques().size() - 1 ));
-        this.getAtaques().get((int) aux).generarEfecto(this, unPokemon);
+        int randomIndex = this.getGenRandom().generarRandom(this.getAtaques().size());
+        this.getAtaques().get(randomIndex).generarEfecto(this, unPokemon);
     }
 
     @Override
