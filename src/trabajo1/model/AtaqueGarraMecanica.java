@@ -11,7 +11,6 @@ public class AtaqueGarraMecanica extends Ataque{
 
             int random = this.generarRandom(10);
             if(random == 1){
-                System.out.println("ENTRE ACA");
                 this.sacarMitadDeLaVidaQueLeQueda(chinpokomon2);
             }else{
                 super.generarEfecto(chinpokomon1, chinpokomon2);

@@ -9,7 +9,6 @@ public class AtaquePomadaWassington extends Ataque{
     }
     @Override
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
-        System.out.println("Entre a pomada");
         chinpokomon1.setVida(chinpokomon1.getVida() + this.getValorDeAtaque());
     }
 }
