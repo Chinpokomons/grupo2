@@ -7,7 +7,7 @@ public class BuilderOfChinpokomon implements Builder{
     private String nombre;
     private List<Ataque> listaDeAtaques;
     private int vida;
-    private Naturaleza naturaleza;
+    private CompuestoNatural naturalezas;
     private GeneracionDeRandom genRandom;
 
     @Override
@@ -26,22 +26,16 @@ public class BuilderOfChinpokomon implements Builder{
     }
 
     @Override
-    public void setNaturaleza(Naturaleza naturaleza) {
-        this.naturaleza = naturaleza;
+    public void setNaturaleza(CompuestoNatural naturaleza) {
+        this.naturalezas = naturaleza;
     }
 
     @Override
     public void setRandom(GeneracionDeRandom genRandom) {
         this.genRandom = genRandom;
     }
-
+    //agregar random
     public Chinpokomon chinpokomonResult(){
-        return new Chinpokomon(vida, nombre, listaDeAtaques, naturaleza) {
-            @Override
-            public void ataque(Chinpokomon chipokomonAAtacar) {
-                int random = genRandom.generarRandom(listaDeAtaques.size());
-                this.getAtaques().get(random).generarEfecto(this, chipokomonAAtacar);
-            }
-        };
+        return new Chinpokomon(vida, nombre, listaDeAtaques, naturalezas,genRandom);
     }
 }
