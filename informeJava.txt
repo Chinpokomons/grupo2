@@ -1,0 +1,13 @@
+En el proyecto java creamos las clases Naturaleza que es el padre de RobotNaturaleza y AnimalNaturaleza donde menejamos las ventajas entre las naturalezas si es que las tiene.
+Creamos la interfaz Natural para hacer uso de las ventajas dependiendo de la naturaleza que llegue como parámetro.
+En la clase Compuesto Natural se aplicó el uso del patron de diseño composite para construir el objeto a partir de otros más simples y similares entre sí gracias a la estructura en forma de árbol.
+La clase CosaNaturaleza declara su ventaja sobra la naturaleza del robot.
+La interfaz Builder con el objetivo de crear un objeto sin constructores conocidos pero con una clase auxiliar, es el caso con el uso en conjunto de la clase BuiderOfChinpokomon que implementa la interfaz Builder.
+La clase Logger para manejar una única instancia dentro de todo el proyecto para generar un punto de acceso global a la misma.
+La clase GeneracionDeRandom para instanciar el random y obtener el numero aleatorio para decidir con que ataque realiza el ataque hacia otro chinpokomon.
+La clase GeneradorDeChinpokomons para hacer uso de la generacion de random, para instanciar al zapato con todas sus necesidades como su lista de ataques, su naturaleza, y su estructura con sus atributos.
+Tambien puede instanciarse el zapato especial con dos ataques, el carnotron, el gallotronix. Como también instanciar mediante mensajes todos los ataques y naturalezas.
+Y por último las clases Ataque siendo padre de las clases AtaqueCanionSonico, AtaqueGarraMecanica, AtaquePomadaWassington, AtaqueRayoVeloz y AtaqueZapatazo haciendo uso de comportamientos de su padre o redefiniendo comportamientos cuando sea necesario, como por ejemplo el daño que genera sobre otro chinpokomon.
+
+
+ 
