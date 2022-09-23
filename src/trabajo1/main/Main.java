@@ -1,17 +1,15 @@
 package trabajo1.main;
 
-import trabajo1.estados.Error;
-import trabajo1.estados.Info;
-import trabajo1.estados.Warn;
-import trabajo1.model.*;
 
+import trabajo1.estados.*;
+import trabajo1.model.*;
 
 public class Main {
     public static void main(String []args) {
     //punto 1
         Info info = new Info();
         Warn warn = new Warn();
-        Error error = new Error();
+        ErrorLog error = new ErrorLog();
 
 
         Logger loggerSingleton = Logger.getInstance();

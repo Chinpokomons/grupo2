@@ -38,18 +38,20 @@ public class Chinpokomon {
     	return naturaleza;
     }
 
-    public void ataque(Chinpokomon unChiPokomon) {
+    public void ataque(Chinpokomon unChiPokomon,Logger log) {
         if(this.noEstaMuertoElChinpokomonAtacar(unChiPokomon) && this.estoyVivo()){
-            this.atacarSegunAtaqueSeleccionado(unChiPokomon);
+            this.atacarSegunAtaqueSeleccionado(unChiPokomon,log);
         }
     }
 
-    private void atacarSegunAtaqueSeleccionado(Chinpokomon unChiPokomonAAtacar){
+    private void atacarSegunAtaqueSeleccionado(Chinpokomon unChiPokomonAAtacar,Logger log){
         if(this.getAtaques().size() == 1){
-            this.getAtaques().get(0).generarEfecto(this, unChiPokomonAAtacar);
+            log.warn("El ataque es: " + this.getAtaques().get(0).toString());
+            this.getAtaques().get(0).generarEfecto(this, unChiPokomonAAtacar,log);
         }else{
             int ataqueElegido = genRandom.generarRandom(this.getAtaques().size());
-            this.getAtaques().get(ataqueElegido).generarEfecto(this, unChiPokomonAAtacar);
+            log.warn("El ataque es: " + this.getAtaques().get(ataqueElegido).toString());
+            this.getAtaques().get(ataqueElegido).generarEfecto(this, unChiPokomonAAtacar,log);
         }
     }
     private boolean estoyVivo(){return this.getVida() >0;}

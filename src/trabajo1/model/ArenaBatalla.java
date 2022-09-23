@@ -37,9 +37,9 @@ public class ArenaBatalla {
     public void pelea(Logger log) {
 
         while(this.noTerminoLaPelea()) {
-                this.getChinpokomon1().ataque(this.getChinpokomon2());
+                this.getChinpokomon1().ataque(this.getChinpokomon2(),log);
                 log.info("Ataco "+ this.getChinpokomon1().getNombre() + " La vida que tiene es: "+ this.getChinpokomon1().getVida() + " y la vida de" + this.getChinpokomon2().getNombre()  +" es " + this.getChinpokomon2().getVida() );
-                this.getChinpokomon2().ataque(this.getChinpokomon1());
+                this.getChinpokomon2().ataque(this.getChinpokomon1(),log);
                 log.info("Ataco " + this.getChinpokomon2().getNombre() + " La vida es: "+ this.getChinpokomon2().getVida() + " y la vida de " + this.getChinpokomon1().getNombre() +" es " + this.getChinpokomon1().getVida() );
         }
         this.imprimirChinpokomonGanador(this.chinpokomonGanador(),log);

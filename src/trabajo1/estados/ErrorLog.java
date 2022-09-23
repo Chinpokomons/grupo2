@@ -2,7 +2,7 @@ package trabajo1.estados;
 
 import trabajo1.model.Logger;
 
-public class Error extends Estado{
+public class ErrorLog extends Estado{
 
     @Override
     public void info2(String mensaje) {
