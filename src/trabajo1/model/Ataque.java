@@ -12,8 +12,9 @@ public class Ataque {
 
     }
 
-    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2){
+    public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2,Logger log){
         if(this.sePuedeAtacar(chinpokomon1,chinpokomon2)){
+            log.warn("El ataque hizo de danio: " + (this.getValorDeAtaque() + this.danioExtraNaturaleza(chinpokomon1, chinpokomon2)));
             chinpokomon2.setVida(chinpokomon2.getVida() - this.getValorDeAtaque() - this.danioExtraNaturaleza(chinpokomon1, chinpokomon2));
         }
     }
