@@ -5,10 +5,11 @@ import java.util.Random;
 public class Ataque {
     private int valorDeAtaque;
     private int valorAtaqueNaturaleza = 0;
-    protected Random random = new Random();
+    protected GeneracionDeRandom random;
 
-    public Ataque(int valorDeAtaque) {
+    public Ataque(int valorDeAtaque,GeneracionDeRandom random) {
         this.valorDeAtaque = valorDeAtaque;
+        this.random = random;
 
     }
 
@@ -23,7 +24,6 @@ public class Ataque {
         return chinpokomon2.getVida()>0 || chinpokomon1.getVida()>0;
     }
 
-    public Random getRandom(){return random;}
 
     public int getValorDeAtaque() {
         return valorDeAtaque;
@@ -36,10 +36,8 @@ public class Ataque {
     public void setValorAtaqueNaturaleza(int valorAtaqueNatural) {
     	this.valorAtaqueNaturaleza = valorAtaqueNatural;
     }
-    
-    public int generarRandom(int valorMaximoExcluyente){
-        return random.nextInt(valorMaximoExcluyente);
-    }
+
+    public GeneracionDeRandom getRandom(){return random;}
 
     public int danioExtraNaturaleza(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2) {
         //determinamos si el chinpokomon1 tiene ventaja de naturaleza sobre el chinpokomon2

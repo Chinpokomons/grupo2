@@ -1,7 +1,7 @@
 package trabajo1.model;
 public class AtaqueGarraMecanica extends Ataque{
-    public AtaqueGarraMecanica(int valorDeAtaque) {
-        super(valorDeAtaque);
+    public AtaqueGarraMecanica(int valorDeAtaque,GeneracionDeRandom random) {
+        super(valorDeAtaque,random);
         //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
         this.setValorAtaqueNaturaleza(2);
     }
@@ -9,7 +9,7 @@ public class AtaqueGarraMecanica extends Ataque{
     @Override
     public void generarEfecto(Chinpokomon chinpokomon1, Chinpokomon chinpokomon2,Logger log) {
 
-            int random = this.generarRandom(10);
+            int random = this.getRandom().generarRandom(10);
             if(random == 1){
                 this.sacarMitadDeLaVidaQueLeQueda(chinpokomon2,log);
             }else{
