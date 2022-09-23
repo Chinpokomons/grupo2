@@ -69,16 +69,14 @@ public class GeneradorDeChinpokomons {
         return builder.chinpokomonResult();
     }
     public AtaqueCanionSonico crearCanionSonico(){
-        return new AtaqueCanionSonico(4);
+        return new AtaqueCanionSonico(4,generator);
     }
-    public AtaqueRayoVeloz crearAtaqueRayoVeloz(){ return new AtaqueRayoVeloz(3); }
+    public AtaqueRayoVeloz crearAtaqueRayoVeloz(){ return new AtaqueRayoVeloz(3,generator); }
     public AtaqueZapatazo crearAtaqueZapato(){
-        return new AtaqueZapatazo(1);
+        return new AtaqueZapatazo(1,generator);
     }
-    public AtaqueGarraMecanica crearAtaqueGarraMecanica(){
-        return new AtaqueGarraMecanica(2);
-    }
-    public AtaquePomadaWassington crearAtaquePomadaWassington(){return new AtaquePomadaWassington(5);}
+    public AtaqueGarraMecanica crearAtaqueGarraMecanica(){ return new AtaqueGarraMecanica(2,generator); }
+    public AtaquePomadaWassington crearAtaquePomadaWassington(){return new AtaquePomadaWassington(5,generator);}
     public RobotNaturaleza crearNaturalezaRobot(){return new RobotNaturaleza();}
     public AnimalNaturaleza crearNaturalezaAnimal(){return new AnimalNaturaleza();}
     public CosaNaturaleza crearNaturalezaCosa(){return new CosaNaturaleza();}

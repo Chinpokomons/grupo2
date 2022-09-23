@@ -2,8 +2,8 @@ package trabajo1.model;
 
 public class AtaquePomadaWassington extends Ataque{
 
-    public AtaquePomadaWassington(int valorDeAtaque) {
-        super(valorDeAtaque);
+    public AtaquePomadaWassington(int valorDeAtaque,GeneracionDeRandom random) {
+        super(valorDeAtaque,random);
       //agregamos el danio extra que realiza este ataque si tiene ventaja de naturaleza
         this.setValorAtaqueNaturaleza(1);
     }
